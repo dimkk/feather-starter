@@ -2,14 +2,15 @@ require('dotenv').config()
 const feathers = require('@feathersjs/feathers')
 const socketio = require('@feathersjs/socketio')
 
-const usersService = require('./app/users/users.service')
-
+const usersService = require('./app-demo/users/users.service')
 const auth = require('@feathersjs/authentication')
 const local = require('@feathersjs/authentication-local')
 const jwt = require('@feathersjs/authentication-jwt')
 const express = require('@feathersjs/express')
 const find = require('find')
 require('./app-demo/utils').createDbFolder()
+
+const articleService = require('./app/article.service')
 
 const app =
     express(feathers())
@@ -23,6 +24,7 @@ const app =
         .configure(local())
         .configure(jwt())
         .configure(usersService)
+        .configure(articleService)
         // .configure(nmServices)
         // .configure(verifyServices)
         // .configure(codexServices)

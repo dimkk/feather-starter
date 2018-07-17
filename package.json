@@ -1,14 +1,12 @@
 {
-  "name": "sos_back",
+  "name": "feather-starter",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "start:prod": "node app.js",
     "start": "node ./node_modules/nodemon/bin/nodemon.js",
-    "test": "nodemon --exec \"mocha -w -c ./app/**/*.spec.js \"",
-    "t:codex": "nodemon --exec \"mocha -w -c ./app/codex/**/*.spec.js \"",
-    "t:ucodex": "nodemon --exec \"mocha -w -c ./app/ucodex/**/*.spec.js \""
+    "test": "nodemon --exec \"mocha -w -c ./app/**/*.spec.js \""
   },
   "author": "dimkk",
   "license": "ISC",
@@ -38,7 +36,6 @@
     "random-word": "^2.0.0",
     "request": "^2.83.0",
     "through2": "^2.0.3",
-    "ursa": "^0.9.4",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
